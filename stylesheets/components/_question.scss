@@ -1,0 +1,10 @@
+@use "../vendors-extensions/variables" as *;
+
+.question_img-Q {
+  width: 22px;
+  height: 25px;
+}
+
+.accordion-button:not(.collapsed) {
+  box-shadow: none !important;
+}

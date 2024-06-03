@@ -1,0 +1,56 @@
+@use '../vendors/bootstrap' as *;
+@use '../vendors-extensions/variables' as *;
+footer {
+  position: relative;
+}
+.footer__line {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 40px;
+  left: 50%;
+  background: $light;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.nav__active {
+  display: block;
+}
+@include media-breakpoint-down(sm) {
+  .nav__active {
+    display: none;
+  }
+}
+
+//資訊
+.footer__icon {
+  color: $primary;
+  font-size: 24px;
+}
+.footer__btn {
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  background-color: $light;
+  position: relative;
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.footer__text {
+  flex-direction: row;
+}
+@include media-breakpoint-down(md) {
+  .footer__text {
+    flex-direction: column;
+    align-items: center;
+  }
+}

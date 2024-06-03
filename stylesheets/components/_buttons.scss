@@ -1,0 +1,62 @@
+@use "../vendors-extensions/variables" as *;
+$span-center-top: 50%;
+.hamburger {
+  z-index: 999;
+  position: relative;
+  width: 45px;
+  height: 42px;
+  span {
+    background: $primary;
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    display: inline-block;
+    box-sizing: border-box;
+    &:nth-child(1) {
+      top: $span-center-top - 18;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:nth-child(2) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:nth-child(3) {
+      top: $span-center-top + 18;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &.hide {
+    display: none;
+  }
+  @media (max-width: 960px) {
+    &.hide {
+      display: block;
+    }
+  }
+}
+
+//footer nav button
+
+.nav__link {
+  color: #f4f4f4cc;
+  &:hover {
+    color: $light;
+    transition: 0.3s all ease-in-out;
+  }
+}
+.nav__link-line {
+  background-color: #f4f4f4cc;
+  display: block;
+  width: 2px;
+  height: 16px;
+}
+
+//form btn
+.form__btn2 {
+  border-radius: 0px !important;
+  height: 6.5rem;
+  border: 2.3px dotted rgba(51, 51, 51, 0.5) !important;
+}
